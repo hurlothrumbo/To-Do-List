@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
 	def home
-		@greeting = "Home action says: Hello World!!!"
+		@list = params[:item]
 	end
 end		
