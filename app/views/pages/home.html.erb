@@ -1,7 +1,11 @@
 <h1>"To-Do List"</h1>
 _____________________<br>
-<p><%= Item.first.name %>
-<form>
+	<ul>
+		<% Item.all.each do |item| %>
+		<li><%= item.name %></li>
+		<% end %>
+	</ul>
+<form action="/save">
 	<input name="item">
 	<button type="submit">Do!</button>
 </form>
